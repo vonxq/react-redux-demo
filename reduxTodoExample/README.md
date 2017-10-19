@@ -1,5 +1,5 @@
 
-[jasmine用于对js代码做单元测试](http://www.cnblogs.com/zhcncn/p/4330112.html)
+[jasmine用于对js代码做单元测试](http://www.cnblogs.com/zhcncn/p/4330112.html)  
 # Redux Todos Example
 
 This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app), which provides a simple way to start React projects with no build configuration needed.
