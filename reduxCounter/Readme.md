@@ -2,6 +2,11 @@
 一个Redux实现的简单计数器  
 看完后可以看一下项目中的reduxTodoExample(这是一个Redux官方实例)加深理解  
 
+## 更新记录
+12.6 新加了一个testcounter，用于测试combineReducer的使用，控制台可见
+    测试结论: combineReducer的key值只与state的命名空间有关，与reducer的执行与否无关，reducer会被顺序执行，但各个reducer的state状态不同，不会相互污染
+        (dva reducer可直接dispatch('namespace/reducer函数'),估计是一个switch实现，即namespace其实只有一个reducer，不过有多个switch分支)
+
 ## 简介
 [React Redux中文文档](http://cn.redux.js.org/docs/react-redux/index.html)  
 [Redux中文文档](http://cn.redux.js.org/index.html)  
@@ -25,6 +30,7 @@ npm run build
 理解以下五个函数:
 1. reducer是一个函数， (state=initstate, action) => newState
 2. combineReducers({reducer1, reducer2})，将多个reducer合并
+  注: 会顺序执行各个reducer, reducer有各自命名空间(对象key值)，不会相互污染
 3. createStore(reducers, initState)
 4. connect([mapStateToProps], [mapDispatchToProps], [mergeProps],[options])(组件)
     1. mapStateToProps(state, ownProps) => stateProps

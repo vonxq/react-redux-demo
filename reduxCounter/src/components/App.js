@@ -32,7 +32,7 @@ let Add = ({ dispatch, counter, store }) => {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-      counter: state
+      counter: state.counter
   }
 }
 // 使Add具有dispatch等方法(store提供  )
